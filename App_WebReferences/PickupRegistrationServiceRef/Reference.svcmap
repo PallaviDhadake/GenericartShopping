@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="20bd27e4-ec70-4879-8d30-2773d8530bcf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://netconnect.bluedart.com/Ver1.9/ShippingAPI/Pickup/PickupRegistrationService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PickupRegistrationService.xsd" MetadataType="Schema" ID="6c812930-7f77-4c1b-ad6d-6e2106bcddea" SourceId="1" SourceUrl="https://netconnect.bluedart.com/Ver1.9/ShippingAPI/Pickup/PickupRegistrationService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PickupRegistrationService1.xsd" MetadataType="Schema" ID="81b16e15-5cf2-4615-ba28-f6ba4234b0c4" SourceId="1" SourceUrl="https://netconnect.bluedart.com/Ver1.9/ShippingAPI/Pickup/PickupRegistrationService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PickupRegistrationService2.xsd" MetadataType="Schema" ID="bc0aeb8a-8a52-4a47-88f9-93d13baebc47" SourceId="1" SourceUrl="https://netconnect.bluedart.com/Ver1.9/ShippingAPI/Pickup/PickupRegistrationService.svc?xsd=xsd5" />
+    <MetadataFile FileName="PickupRegistrationService3.xsd" MetadataType="Schema" ID="de741003-c1eb-494b-b136-2047499ebcbb" SourceId="1" SourceUrl="https://netconnect.bluedart.com/Ver1.9/ShippingAPI/Pickup/PickupRegistrationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PickupRegistrationService4.xsd" MetadataType="Schema" ID="9acbc8bf-d683-4d87-a50c-57be58c96a51" SourceId="1" SourceUrl="https://netconnect.bluedart.com/Ver1.9/ShippingAPI/Pickup/PickupRegistrationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PickupRegistration.wsdl" MetadataType="Wsdl" ID="085667ab-00da-4c18-8da8-d7e8e023fa00" SourceId="1" SourceUrl="https://netconnect.bluedart.com/Ver1.9/ShippingAPI/Pickup/PickupRegistrationService.svc?wsdl" />
+    <MetadataFile FileName="PickupRegistrationService5.xsd" MetadataType="Schema" ID="7bc07ddd-446e-47b1-ae53-948453147ec8" SourceId="1" SourceUrl="https://netconnect.bluedart.com/Ver1.9/ShippingAPI/Pickup/PickupRegistrationService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

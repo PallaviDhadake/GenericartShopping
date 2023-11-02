@@ -1,0 +1,397 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Shop/ShopMain.master.cs" Inherits="ShopMain" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shop Panel</title>
+    <meta name="description" content="Master Admin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../MemberFiles/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../MemberFiles/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../MemberFiles/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../MemberFiles/AdminLTE.min.css">
+    <link rel="stylesheet" href="../MemberFiles/_all-skins.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="../MemberFiles/blue.css">
+    <!-- Morris chart -->
+    <link rel="stylesheet" href="../MemberFiles/morris.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="../MemberFiles/jquery-jvectormap-1.2.2.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="../MemberFiles/datepicker3.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="../MemberFiles/daterangepicker.css">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="../MemberFiles/bootstrap3-wysihtml5.min.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+    <style>
+        .sidebar-menu > li {
+            border-bottom: 1px solid #16487d;
+            border-top: 1px solid #16487d;
+        }
+
+        .sidebar-menu .treeview-menu > li > a {
+            padding: 8px 5px 8px 20px;
+        }
+
+        .sidebar-menu .treeview-menu > li {
+            border-bottom: 1px solid #16487d;
+            padding-left: 5px;
+        }
+
+        .control-label {
+            padding-top: 7px;
+            margin-bottom: 0;
+            text-align: right;
+        }
+
+        .btn-top {
+            margin-top: 11px;
+            margin-right: 15px;
+            border-radius: 4px;
+        }
+
+            .btn-top a {
+                padding: 3px 10px !important;
+            }
+
+        @media only screen and (max-width: 767px) {
+            .btn-top {
+                margin: 0;
+                position: absolute !important;
+                right: 15px;
+                top: -39px;
+                z-index: 1;
+            }
+
+            .btn-top {
+                margin-right: 15px;
+                border-radius: 4px;
+            }
+
+            .logo-lg {
+                font-size: 0pt !important;
+                text-align: center;
+            }
+        }
+    </style>
+
+    <style>
+        .slimScrollDiv {
+            height: 620px !important;
+        }
+
+        #chat-box {
+            height: 620px !important;
+        }
+    </style>
+    <style type="text/css">
+        .jqstooltip {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            visibility: hidden;
+            background: rgb(0, 0, 0) transparent;
+            background-color: rgba(0,0,0,0.6);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+            white-space: nowrap;
+            padding: 5px;
+            border: 1px solid white;
+            z-index: 10000;
+        }
+
+        .jqsfield {
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+        }
+
+        .header {
+            font-weight: bold;
+            padding: 15px 0px;
+            font-size: 18px;
+        }
+
+        .content {
+            clear: both !important;
+        }
+
+        .col-md-4 {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width:600px) {
+            .breadcrumb {
+                display: none;
+            }
+        }
+
+        .page-header {
+            margin: 10px 0 0px 0;
+        }
+
+        .main-sidebar, .sidebar-menu {
+            background-color: #00c0ef;
+        }
+
+            .sidebar-menu a {
+                color: black;
+                font-weight: 600;
+            }
+
+        .breadcrumb {
+            background-color: transparent !important;
+        }
+
+        .page-title h1 {
+            font-size: 25px !important;
+        }
+
+        a {
+            color: #4d4d4d;
+        }
+    </style>
+
+    <style>
+        .fade.in {
+            opacity: 1;
+        }
+
+        .show {
+            display: block !important;
+            opacity: 1;
+        }
+
+            .show .modal-dialog {
+                margin-top: 20vh;
+            }
+
+        .modal.in .modal-dialog {
+            -webkit-transform: translate(0,0);
+            -ms-transform: translate(0,0);
+            transform: translate(0,0);
+        }
+    </style>
+
+    <!--start calender-->
+    <link rel="stylesheet" href="../Calender/pikaday.css" />
+    <script src="../Calender/moment.js"></script>
+    <script src="../Calender/pikaday.js"></script>
+    <!--end calender-->
+
+    <script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js'></script>
+
+    <script type="text/javascript">
+        function ShowPopup() {
+            $("#myModal").addClass("show");
+        }
+    </script>
+
+    <script type="text/javascript">
+        function ShowPopupDeliver() {
+            $("#myModalDeliver").addClass("show");
+        }
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="skin-blue sidebar-mini">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="SC1" runat="server"></asp:ScriptManager>
+
+
+
+
+        <div class="wrapper">
+            <header class="main-header">
+    <!-- Logo -->
+    <a href="Default.aspx" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b></b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg" style="font-size:11pt;text-align:center;">
+          <img src="../images/logo.png" style="    height: 50px;" class="left"></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="Default.aspx#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+               <li id="ctl00_notification" class="btn-top hidden">
+                        <a href="#" id="kycLink" class="btn btn-info">
+                            <%--<i id="ctl00_icon" class="fa fa-check-square-o"><b id="ctl00_bicon" class="bg-success"></b></i>--%>
+                            <span id="ctl00_kycstatus"><%= StatusShow %></span>
+                        </a>
+                    </li>
+         <li class="dropdown user user-menu">
+            <a href="Default.aspx#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="../MemberFiles/human.jpg" class="user-image" alt="User Image">
+              <span id="userName" class="hidden-xs"><%= UserName %></span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="../MemberFiles/human.jpg" class="img-circle" alt="User Image">
+
+                <p id="userProfile"><%= UserName %> - <%= ShopId %></p>
+              </li>
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="ModifyProfile.aspx" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="../Log_Out.aspx" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+            <li><a href="../Log_Out.aspx"><i class="fa fa-sign-out"></i>Logout</a> </li>
+          <!-- Control Sidebar Toggle Button -->
+          
+        </ul>
+      </div>
+    </nav>
+  </header>
+            <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar" style="height: auto;">
+      <!-- Sidebar user panel -->
+     
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+        
+      <ul class="sidebar-menu">
+        <li class="active">
+          <a href="Default.aspx">
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="treeview <%= FranchiseHide %>">
+          <a href="#">
+            <i class="fa fa-database"></i> <span>Profile Management</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu ">
+            
+            <li><a href="ModifyProfile.aspx"><i class="fa fa-circle-o"></i> My Profile</a></li>
+            <li><a href="ModifyPassword.aspx"><i class="fa fa-circle-o"></i> Change Password</a></li>
+                      </ul>
+        </li>
+          <li class="treeview ">
+          <a href="#">
+            <i class="fa fa-hospital-o"></i> <span>Prescription</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu ">
+            
+            <li><a href="PrescriptionList.aspx"><i class="fa fa-circle-o"></i>Prescription List</a></li>
+            <li><a href="ApprovedPrescription.aspx"><i class="fa fa-circle-o"></i> Approved Prescription</a></li>
+                      </ul>
+        </li>
+           <li class="treeview ">
+          <a href="#">
+            <i class="fa fa-medkit"></i> <span>Product Enquiry</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu ">
+            <li><a href="ProductEnquiryList.aspx"><i class="fa fa-circle-o"></i>Product Enquiry List</a></li>
+              <li><a href="ApprovedProductEnquiryList.aspx"><i class="fa fa-circle-o"></i>Approved Product Enquiry List</a></li>
+                      </ul>
+        </li>
+        <li class="treeview">
+          <a href="../Log_Out.aspx">
+            <i class="fa fa-lock"></i> <span> Logout</span>
+            
+          </a>
+          
+        </li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+
+            <div class="content-wrapper" style="min-height: 507px;">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <footer class="main-footer">
+    
+    <strong>Copyright © 2019. <%= MasterClass.GetProjectName() %></strong> 
+  </footer>
+
+        </div>
+        <!-- jQuery 2.2.3 -->
+        <script src="../MemberFiles/jquery-2.2.3.min.js"></script>
+        <!-- jQuery UI 1.11.4 -->
+        <script src="../MemberFiles/jquery-ui.min.js"></script>
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script>
+            $.widget.bridge('uibutton', $.ui.button);
+        </script>
+        <!-- Bootstrap 3.3.6 -->
+        <script src="../MemberFiles/bootstrap.min.js"></script>
+        <!-- Morris.js charts -->
+        <script src="../MemberFiles/raphael-min.js"></script>
+        <script src="../MemberFiles/morris.min.js"></script>
+        <!-- Sparkline -->
+        <script src="../MemberFiles/jquery.sparkline.min.js"></script>
+        <!-- jvectormap -->
+        <script src="../MemberFiles/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="../MemberFiles/jquery-jvectormap-world-mill-en.js"></script>
+        <!-- jQuery Knob Chart -->
+        <script src="../MemberFiles/jquery.knob.js"></script>
+        <!-- daterangepicker -->
+        <script src="../MemberFiles/moment.min.js"></script>
+        <script src="../MemberFiles/daterangepicker.js"></script>
+        <!-- datepicker -->
+        <script src="../MemberFiles/bootstrap-datepicker.js"></script>
+        <!-- Bootstrap WYSIHTML5 -->
+        <script src="../MemberFiles/bootstrap3-wysihtml5.all.min.js"></script>
+        <!-- Slimscroll -->
+        <script src="../MemberFiles/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../MemberFiles/fastclick.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../MemberFiles/app.min.js"></script>
+        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+        <script src="../MemberFiles/dashboard.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="../MemberFiles/demo.js"></script>
+
+        <div class="jvectormap-label"></div>
+    </form>
+</body>
+</html>

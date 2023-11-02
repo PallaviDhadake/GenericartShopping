@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cba33763-63a0-4463-9ecc-42aa799abc26" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://netconnect.bluedart.com/Ver1.9/ShippingAPI/WayBill/WayBillGeneration.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WayBillGeneration.disco" MetadataType="Disco" ID="2ff8231f-44ea-491e-9e77-093747d38b4f" SourceId="1" SourceUrl="https://netconnect.bluedart.com/Ver1.9/ShippingAPI/WayBill/WayBillGeneration.svc?disco" />
+    <MetadataFile FileName="WayBillGeneration.xsd" MetadataType="Schema" ID="dbb24091-5fc3-4225-aabc-700c8c6455f2" SourceId="1" SourceUrl="https://netconnect.bluedart.com/Ver1.9/ShippingAPI/WayBill/WayBillGeneration.svc?xsd=xsd3" />
+    <MetadataFile FileName="WayBillGeneration1.xsd" MetadataType="Schema" ID="7c30fcb0-772e-44cd-b54d-be5a19b5dcce" SourceId="1" SourceUrl="https://netconnect.bluedart.com/Ver1.9/ShippingAPI/WayBill/WayBillGeneration.svc?xsd=xsd2" />
+    <MetadataFile FileName="WayBillGeneration2.xsd" MetadataType="Schema" ID="92b483f1-0543-4b25-b0ec-44c6a6076ffe" SourceId="1" SourceUrl="https://netconnect.bluedart.com/Ver1.9/ShippingAPI/WayBill/WayBillGeneration.svc?xsd=xsd1" />
+    <MetadataFile FileName="WayBillGeneration3.xsd" MetadataType="Schema" ID="5766eb6a-8374-4eee-b87f-1c20711ba8c4" SourceId="1" SourceUrl="https://netconnect.bluedart.com/Ver1.9/ShippingAPI/WayBill/WayBillGeneration.svc?xsd=xsd0" />
+    <MetadataFile FileName="WayBillGeneration.wsdl" MetadataType="Wsdl" ID="b8321d7d-c8d2-48cd-93ed-e9397aa83da1" SourceId="1" SourceUrl="https://netconnect.bluedart.com/Ver1.9/ShippingAPI/WayBill/WayBillGeneration.svc?wsdl" />
+    <MetadataFile FileName="WayBillGeneration4.xsd" MetadataType="Schema" ID="dd28331d-1cd8-4b57-b1a1-ed69aca17f34" SourceId="1" SourceUrl="https://netconnect.bluedart.com/Ver1.9/ShippingAPI/WayBill/WayBillGeneration.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

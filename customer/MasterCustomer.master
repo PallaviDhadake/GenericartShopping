@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterParent.master" AutoEventWireup="true" CodeFile="MasterCustomer.master.cs" Inherits="customer_MasterCustomer" %>
+<%@ MasterType VirtualPath="~/MasterParent.master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+
+	<script type="text/javascript">
+		function sessionPingTrigger() {
+			//alert("1");
+			setInterval(function () { sessionPing() }, 60000);
+		}
+		function sessionPing() {
+			//alert("worked");
+			ShoppingWebService.AdminLoginUpdate();
+			//alert("worked1");
+		}
+	</script>
+
+	<asp:ContentPlaceHolder id="head" runat="server">
+	</asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	
+	<!-- User Info Starts -->
+	<span class="space50"></span>
+	<div class="col_1140" id="userInfo">
+		<!-- Left Sidebar Starts -->
+		<div class="width25">
+			<div class="pad_10">
+				<div class="bgWhite border_r_5 box-shadow">
+					<div class="pad_15">
+						<div class="userImg" style="<%= bgColor %>">
+							<div class="uname">
+								<span class="clrWhite semiBold"><%= firstChar %></span>
+							</div>
+						</div>
+						<div class="userName">
+							<span class="small clrLightBlack dispBlk fontRegular">Hello</span>
+							<h1 class="semiMedium clrLightBlack semiBold"><%= sessionName %></h1>
+						</div>
+						<div class="float_clear"></div>
+					</div>
+				</div>
+				<span class="space20"></span>
+				<ul class="userList">
+					<li><a href="<%= Master.rootPath + "customer/user-info" %>" class="customer">Basic Info</a></li>
+					<li><a href="<%= Master.rootPath + "customer/user-address" %>" class="userAddress">Address</a></li>
+					<%--<li><a href="#" class="userPayment">Payment</a></li>
+					<li><a href="#" class="userRefill">Refill</a></li>--%>
+					<li><a href="https://wa.me/919730484686?text=I'm%20interested%20for%20your%20consultation" target="_blank" class="userConsult">Consult Pharmacist</a></li>
+					<li><a href="<%= Master.rootPath + "customer/request-prescription" %>" class="userRx">Request Prescription</a></li>
+					<li><a href="<%= Master.rootPath + "customer/my-orders" %>" class="userOrders">My Medicine Requests</a></li>
+					<li><a href="https://play.google.com/store/apps/details?id=com.autoqed.genericartmedicine" target="_blank" class="userMonthSub tooltip">Pill Reminder<span class="tooltiptext1">Download our App to Set Pill Reminder</span></a></li>
+					<%--<li><a href="<%= Master.rootPath + "customer/my-appointment" %>" class="userAppointment">My Appointments</a></li>--%>
+					<li><a href="#" class="userHealth">Health Records</a></li>
+					<li><a href="<%= Master.rootPath + "customer/change-password" %>" class="changePass">Change Password</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Left Sidebar Ends -->
+		<!-- Basic Info Starts -->
+		<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+			
+		</asp:ContentPlaceHolder>
+		
+		<!-- Basic Info Ends -->
+		<!-- Right Sidebar Starts -->
+		<div class="width25">
+			<div class="pad_10">
+				<ul class="userList">
+					<li><a href="<%= Master.rootPath + "?act=custlogout" %>" class="userSignout">Sign Out</a></li>
+					<li><a href="#" class="userTerms">Terms and Conditions</a></li>
+					<li><a href="#" class="userFaq">FAQ</a></li>
+				</ul>
+
+				<span class="space10"></span>
+
+				<div class="bgWhite border_r_5 box-shadow">
+					<div class="pad_15">
+						<div class="userSupport"><img src="<%= Master.rootPath + "images/icons/support-small.png" %>" /></div>
+						<div class="userSupportInfo">
+							<h3 class="clrLightBlack semiBold small">Support</h3>
+						</div>
+						<div class="float_clear"></div>
+						<span class="space10"></span>
+						<p class="clrGrey tiny">Facing any issues ? <br /> Drop us a message or call on our toll free number and let us know about the issue.</p>
+						<span class="space20"></span>
+						<a href="<%= Master.rootPath + "contact-us" %>" class="semiBold blueAnch dspInlineBlk small">Contact Us</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Right Sidebar Ends -->
+		<div class="float_clear"></div>
+	</div>
+	<span class="space50"></span>
+	<!-- User Info Ends -->
+</asp:Content>
+

@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterParent.master" AutoEventWireup="true" CodeFile="MasterGobp.master.cs" Inherits="obp_MasterGobp" %>
+<%@ MasterType VirtualPath="~/MasterParent.master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <script type="text/javascript">
+		function sessionPingTrigger() {
+			//alert("1");
+			setInterval(function () { sessionPing() }, 60000);
+		}
+		function sessionPing() {
+			//alert("worked");
+			ShoppingWebService.AdminLoginUpdate();
+			//alert("worked1");
+		}
+    </script>
+
+	<style type="text/css">
+		.gradStats {
+		  background-color: #67bbee; /* For browsers that do not support gradients */
+		  background-image: linear-gradient(#67bbee, #ccecff);
+		  text-align:center;
+		  padding:15px;
+		}
+			.gradStats h4 {
+				font-size:2em;color:#000000; font-weight:600;
+			}
+				.gradStats h4 span {
+					display:block;font-size:0.7em;color:#323232;
+				}
+		.col_1_3_fluid {
+			float:left;display:inline;width:33%;
+		}
+
+		.icon-link {
+		  display: flex;
+			  align-items: center;
+			  padding: 10px;
+			  text-decoration: none;
+			  border-radius: 5px;
+			  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+			  background-color: #ffffff;
+			  color:#000;
+			  
+		}
+
+		.icon {
+		  display: inline-block;
+		  width: 24px;
+		  height: 24px;
+		  background-image: url('../images/icons/obp/customer.png');
+		  background-repeat: no-repeat;
+		  background-position: center center;
+		  margin-right: 10px;
+		}
+		.link-text {
+		  display: inline-block;
+		  font-weight:600;
+		}
+		.icoCustomer {
+			background-image: url('../images/icons/obp/customer.png') !important;
+		}
+		.icoPlaceOrder {
+			background-image: url('../images/icons/obp/medicine.png') !important;
+		}
+		.icoOrdersTill {
+			background-image: url('../images/icons/obp/orders.png') !important;
+		}
+	</style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<!-- User Info Starts -->
+	<span class="space50"></span>
+	<div class="col_1140" id="userInfo">
+		<!-- Left Sidebar Starts -->
+		<div class="width25">
+			<div class="pad_10">
+				<div class="bgWhite border_r_5 box-shadow">
+					<div class="pad_15">
+						<div class="userImg" style="<%= bgColor %>">
+							<div class="uname">
+								<span class="clrWhite semiBold"><%= firstChar %></span>
+							</div>
+						</div>
+						<div class="userName">
+							<span class="small clrLightBlack dispBlk fontRegular">Hello</span>
+							<h1 class="semiMedium clrLightBlack semiBold"><%= sessionName %></h1>
+						</div>
+						<div class="float_clear"></div>
+					</div>
+				</div>
+				<span class="space20"></span>
+				<ul class="userList">
+					<li><a href="#" target="_blank" class="userConsult">Dashboard</a></li>
+					<li><a href="add-customer.aspx" class="customer">Add Customer</a></li>
+					<li><a href="<%= rootPath + "categories/medicine-7/1" %>" class="userOrders">Place Order</a></li>
+					<li><a href="#" class="userRx">Prescription Upload	</a></li>
+					<li><a href="#" class="changePass">Change Password</a></li>
+					<li><a href="<%=rootPath + "?act=obplogout" %>>" class="userSignout">Sign Out</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Left Sidebar Ends -->
+		<!-- Basic Info Starts -->
+		<div class="width70">
+		<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+			
+		</asp:ContentPlaceHolder>
+		</div>
+		<!-- Basic Info Ends -->
+		<div class="float_clear"></div>
+	</div>
+	<span class="space50"></span>
+	<!-- User Info Ends -->
+</asp:Content>
+
